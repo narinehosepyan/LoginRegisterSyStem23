@@ -25,16 +25,55 @@
         <a class="nav-link" href="/auth/register">Register</a>
       </li> 
       <li class="nav-item">
-          <a class="nav-link" href="/auth/logOut">logOut</a>
+          <a class="nav-link" href="/auth/logOut">LogOut</a>
       </li>
     </ul>
   </div>  
 </nav>
 <br>
 <div class="container ">
-    <h1 class="pt-4 text text-danger">Welcome<%= username %></h1>
-</div>
+    <h1 class="pt-4 text-primary">Welcome <%= username %></h1>
+    <p>
+      <a href="/admin/createArticle"> <button class="btn btn-primary float-right">Add New Artice</button></a>
+     </p>
 
+     <div class="table-responsive">
+      <table class="table table-bordered w-100">
+        <thead class="thead-dark">
+          <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Content</th>
+        <th>Image</th>
+        <th>Read</th> 
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+        </thead>
+      <% articles.forEach(article=>{ %>
+        <tbody>
+        <tr>
+          <td><%= article.number %></td>
+          <td><%= article.title %></td>
+          <td><%= article.description %></td>
+          <td><%= article.content %></td>
+          <td><%= article.image %></td>
+          <td>
+           <a href="/admin/readArticle/<%= article._id %>"> <button>Read</button></a>
+          </td>
+          <td>
+            <a href="/admin/updateArticle/<%= article._id %>"> <button>Update</button></a>
+          </td>
+          <td>
+            <a href="/admin/deleteArticle/<%= article._id %>"> <button>Delete</button></a>
+          </td>
+        </tr>
+      </tbody>
+      <% }) %>
+    </table>
+</div>
+</div>
 
 
 </body>

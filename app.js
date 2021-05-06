@@ -31,7 +31,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(session({ 
   name: "ses_name", 
-  secret: "Shh,it is a secret!",
+  secret: "Narine",
   saveUninitialized: true, 
   cookie: {
     httpOnly: true,

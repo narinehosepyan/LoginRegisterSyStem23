@@ -1,5 +1,5 @@
 {
-  "name": "loginregistersystem23",
+  "name": "crud-23",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -13,7 +13,22 @@
     "express": "~4.16.1",
     "express-session": "^1.17.1",
     "http-errors": "~1.6.3",
+    "i": "^0.3.6",
     "mongoose": "^5.12.7",
-    "morgan": "~1.9.1"
-  }
+    "morgan": "~1.9.1",
+    "multer": "^1.4.2",
+    "sharp": "^0.28.1"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narinehosepyan/LoginRegisterSyStem23.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/narinehosepyan/LoginRegisterSyStem23/issues"
+  },
+  "homepage": "https://github.com/narinehosepyan/LoginRegisterSyStem23#readme",
+  "description": ""
 }
